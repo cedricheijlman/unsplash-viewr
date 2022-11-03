@@ -1,0 +1,8 @@
+.discover header {
+  min-height: 688px;
+  background-image: url("./discover.png");
+  margin: 16px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}

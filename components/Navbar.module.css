@@ -1,6 +1,7 @@
 .navBar {
   display: flex;
   justify-content: center;
+  position: absolute;
   width: 100%;
 }
 
@@ -10,6 +11,7 @@
 }
 
 .navBarList li {
+  color: #ffffff;
   margin-top: 32px;
   margin-left: 31px;
   margin-right: 31px;
