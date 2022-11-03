@@ -1,0 +1,30 @@
+.navBar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.navBarList {
+  display: flex;
+  list-style-type: none;
+}
+
+.navBarList li {
+  margin-top: 32px;
+  margin-left: 31px;
+  margin-right: 31px;
+  font-family: "inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#logo {
+  margin-top: 34px;
+  margin-left: 60px;
+  margin-right: 60px;
+  font-weight: 700;
+  font-size: 17px;
+}
