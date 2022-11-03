@@ -6,6 +6,7 @@
 .image {
   width: 203px;
   height: 288px;
+  object-fit: cover;
 }
 
 .description {

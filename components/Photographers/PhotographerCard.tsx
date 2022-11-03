@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./PhotographerCard.module.css";
 import Image from "next/image";
 
-const PhotographerCard = () => {
+const PhotographerCard = ({ nameProfile, totalPhotos, profileImage }: any) => {
   return (
     <article className={styles.photographerCard}>
       <Image
@@ -10,11 +10,11 @@ const PhotographerCard = () => {
         className={styles.image}
         height={100}
         alt="Photographer"
-        src="/image.png"
+        src={profileImage}
       />
       <div className={styles.description}>
-        <p className={styles.name}>Ivy Madison</p>
-        <p className={styles.photoTotal}>1.412 Photos</p>
+        <p className={styles.name}>{nameProfile}</p>
+        <p className={styles.photoTotal}>{totalPhotos} Photo&apos;s</p>
       </div>
     </article>
   );
