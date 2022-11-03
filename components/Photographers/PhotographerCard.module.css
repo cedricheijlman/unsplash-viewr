@@ -1,0 +1,24 @@
+.photographerCard {
+  border: 1px solid #cccccc;
+  margin: 7.5px;
+}
+
+.image {
+  width: 203px;
+  height: 288px;
+}
+
+.description {
+  padding: 14px 24px;
+}
+
+.name {
+  padding-bottom: 4px;
+  font-size: 16px;
+}
+
+.photoTotal {
+  padding-top: 4px;
+  font-size: 14px;
+  color: #919191;
+}

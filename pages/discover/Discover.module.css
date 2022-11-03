@@ -1,3 +1,16 @@
+.sectionTitle {
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 18px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1.5px;
+  color: #0b0b0b;
+  font-weight: 500;
+  font-family: "Inter";
+  text-transform: uppercase;
+}
+
 .discover header {
   min-height: 688px;
   background-image: url("./discover.png");
@@ -15,6 +28,7 @@
     17.8977272727% 624px,
     0 624px
   );
+  margin-bottom: 56px;
 }
 
 .blockQuote {
@@ -23,6 +37,8 @@
   top: calc(226 / 688 * 100%);
   left: calc(164 / 1408 * 100%);
   z-index: 99;
+  max-width: 650px;
+  margin-right: 60px;
 }
 
 .blockQuote p {
@@ -36,6 +52,15 @@
 }
 
 .discover cite {
+  font-style: normal;
+  font-family: "Inter";
+  font-weight: 12px;
+  line-height: 16px;
+  letter-spacing: 2%;
+}
+
+.citeDescription {
+  color: #cccccc;
 }
 
 .dot {
@@ -47,3 +72,23 @@
   border: 1.5px solid #ffffff;
   display: inline-block;
 }
+
+/* ------- Photographers Section ------- */
+
+.photographers {
+  display: flex;
+  flex-direction: column;
+  margin: 0 68px;
+  justify-content: center;
+}
+
+.photographersRow {
+  margin: 40.5px 0;
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------- Photo's Section ------- */
