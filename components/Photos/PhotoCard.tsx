@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./Photocard.module.css";
+import type { activePhoto } from "../activePhotoType";
 
 interface PhotoCardInterface {
   creator: string;
@@ -8,6 +9,9 @@ interface PhotoCardInterface {
   publishDate: string;
   totalLikes: number;
   downloadLink: string;
+  photoIndex: number;
+  activePhoto: activePhoto;
+  setActivePhoto: any;
 }
 
 const PhotoCard = ({
@@ -16,17 +20,41 @@ const PhotoCard = ({
   publishDate,
   totalLikes,
   downloadLink,
+  photoIndex,
+  activePhoto,
+  setActivePhoto,
 }: PhotoCardInterface) => {
+  const makePhotoActive = () => {
+    setActivePhoto({
+      index: photoIndex,
+      creator,
+      photographImage,
+      publishDate,
+      totalLikes,
+      downloadLink,
+    });
+  };
+
   return (
-    <article className={styles.photoCard}>
+    <article onClick={makePhotoActive} className={styles.photoCard}>
       <Image
         src={photographImage}
         alt="Photo"
         width="0"
         height="0"
         sizes="100vw"
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: "100%", height: "auto" }}
       />
+
+      {activePhoto.index == photoIndex ? (
+        <>
+          <div className={styles.creator}>
+            <h1>{creator}</h1>
+          </div>
+        </>
+      ) : (
+        ""
+      )}
     </article>
   );
 };

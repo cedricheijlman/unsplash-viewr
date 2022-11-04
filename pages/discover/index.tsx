@@ -1,11 +1,21 @@
 import { GetStaticProps } from "next";
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import PhotographerCard from "../../components/Photographers/PhotographerCard";
 import PhotoCard from "../../components/Photos/Photocard";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import styles from "./Discover.module.css";
+import type { activePhoto as activePhotoType } from "../../components/activePhotoType";
 
 const Discover: React.FC = ({ photos }: any) => {
+  const [activePhoto, setActivePhoto] = useState<activePhotoType>({
+    index: 99,
+    creator: "",
+    photographImage: "",
+    publishDate: "",
+    totalLikes: 0,
+    downloadLink: "",
+  });
+
   return (
     <main className={styles.discover}>
       <header>
@@ -49,6 +59,9 @@ const Discover: React.FC = ({ photos }: any) => {
           {photos.map((photo: any[any], i: number) => {
             return (
               <PhotoCard
+                photoIndex={i}
+                activePhoto={activePhoto}
+                setActivePhoto={setActivePhoto}
                 downloadLink={photo.links.download}
                 key={i}
                 publishDate={photo.created_at}
