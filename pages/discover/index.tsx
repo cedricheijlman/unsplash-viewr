@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import React, { useState } from "react";
 import PhotographerCard from "../../components/Photographers/PhotographerCard";
-import PhotoCard from "../../components/Photos/Photocard";
+import PhotoCard from "../../components/Photos/PhotoCard";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import styles from "./Discover.module.css";
 import type { activePhoto as activePhotoType } from "../../components/activePhotoType";
