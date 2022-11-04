@@ -22,12 +22,17 @@
   line-height: 24px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  text-underline-offset: 8px;
 }
 
 #logo {
   margin-top: 34px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 66.43px;
+  margin-right: 66.43px;
   font-weight: 700;
   font-size: 17px;
+}
+
+.active {
+  text-decoration: underline;
 }
