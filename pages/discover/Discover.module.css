@@ -92,3 +92,17 @@
 }
 
 /* ------- Photo's Section ------- */
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  margin: 0 68px;
+  justify-content: center;
+}
+
+.photoGallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0;
+  justify-content: space-between;
+}

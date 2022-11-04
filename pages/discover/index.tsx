@@ -1,6 +1,7 @@
 import { GetStaticProps } from "next";
 import React, { useEffect } from "react";
 import PhotographerCard from "../../components/Photographers/PhotographerCard";
+import PhotoCard from "../../components/Photos/Photocard";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import styles from "./Discover.module.css";
 
@@ -29,15 +30,12 @@ const Discover: React.FC = ({ photos }: any) => {
           {photos
             .filter((_: [], i: number) => i < 4)
             .map((photo: any[any], i: number) => {
-              const nameProfile = photo.user.name;
-              const profileImage = photo.user.profile_image.large;
-              const totalPhotos = photo.user.total_photos;
-
+              console.log(photos);
               return (
                 <PhotographerCard
-                  profileImage={profileImage}
-                  totalPhotos={totalPhotos}
-                  nameProfile={nameProfile}
+                  profileImage={photo.user.profile_image.large}
+                  totalPhotos={photo.user.total_photos}
+                  nameProfile={photo.user.name}
                   key={i}
                 />
               );
@@ -45,7 +43,23 @@ const Discover: React.FC = ({ photos }: any) => {
         </div>
       </section>
 
-      <section className={styles.photos}></section>
+      <section className={styles.photos}>
+        <h2 className={styles.sectionTitle}>Photos</h2>
+        <div className={styles.photoGallery}>
+          {photos.map((photo: any[any], i: number) => {
+            return (
+              <PhotoCard
+                downloadLink={photo.links.download}
+                key={i}
+                publishDate={photo.created_at}
+                totalLikes={photo.likes}
+                creator={photo.user.name}
+                photographImage={photo.urls.regular}
+              />
+            );
+          })}
+        </div>
+      </section>
     </main>
   );
 };

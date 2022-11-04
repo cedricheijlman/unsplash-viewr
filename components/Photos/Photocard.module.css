@@ -1,0 +1,4 @@
+.photoCard {
+  object-fit: contain;
+  position: relative;
+}

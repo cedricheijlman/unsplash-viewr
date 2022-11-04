@@ -2,7 +2,17 @@ import React from "react";
 import styles from "./PhotographerCard.module.css";
 import Image from "next/image";
 
-const PhotographerCard = ({ nameProfile, totalPhotos, profileImage }: any) => {
+interface PhotographerCardInterface {
+  nameProfile: string;
+  totalPhotos: number;
+  profileImage: string;
+}
+
+const PhotographerCard = ({
+  nameProfile,
+  totalPhotos,
+  profileImage,
+}: PhotographerCardInterface) => {
   return (
     <article className={styles.photographerCard}>
       <Image
