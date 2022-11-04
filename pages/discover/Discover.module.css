@@ -101,8 +101,8 @@
 }
 
 .photoGallery {
-  display: flex;
-  flex-wrap: wrap;
+  columns: 3;
+  column-gap: 16px;
+
   padding: 50px 0;
-  justify-content: space-between;
 }

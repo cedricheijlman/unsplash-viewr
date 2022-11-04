@@ -66,7 +66,7 @@ const Discover: React.FC = ({ photos }: any) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch(
-    `https://api.unsplash.com/photos/?client_id=${process.env.ACCESS_KEY}`
+    `https://api.unsplash.com/photos/random/?client_id=${process.env.ACCESS_KEY}&count=10`
   );
 
   const photos = await res.json();

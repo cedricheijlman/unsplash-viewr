@@ -1,4 +1,3 @@
 .photoCard {
-  object-fit: contain;
-  position: relative;
+  margin-bottom: 16px;
 }
