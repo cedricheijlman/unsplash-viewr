@@ -6,6 +6,7 @@ import Searchbar from "../../components/Searchbar/Searchbar";
 import styles from "./Discover.module.css";
 import type { activePhoto as activePhotoType } from "../../components/activePhotoType";
 import Image from "next/image";
+import Link from "next/link";
 
 const Discover: React.FC = ({ photos }: any) => {
   const [activePhoto, setActivePhoto] = useState<activePhotoType>({
@@ -97,7 +98,11 @@ const Discover: React.FC = ({ photos }: any) => {
                   <p>Total Likes</p>
                 </div>
               </div>
-              <button>Download</button>
+              <button>
+                <Link target="_blank" href={activePhoto.downloadLink}>
+                  Download
+                </Link>
+              </button>
             </div>
           )}
         </div>
