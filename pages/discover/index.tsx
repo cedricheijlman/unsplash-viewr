@@ -80,12 +80,22 @@ const Discover: React.FC = ({ photos }: any) => {
                 width={100}
                 height={100}
               />
-              <div>
-                <p>{activePhoto.creator}</p>
+
+              <div className={styles.photoDetailsDiv}>
+                <p className={styles.photoDescription}>
+                  Description about the picture
+                </p>
+                <p className={styles.creatorName}>{activePhoto.creator}</p>
               </div>
-              <div>
-                <h4>{activePhoto.totalLikes}</h4>
-                <p>Total Likes</p>
+              <div className={styles.photoDetailsInfo}>
+                <div className={styles.photoDetailsDiv}>
+                  <h4>{activePhoto.totalLikes}</h4>
+                  <p>Total Likes</p>
+                </div>
+                <div className={styles.photoDetailsDiv}>
+                  <h4>{activePhoto.totalLikes}</h4>
+                  <p>Total Likes</p>
+                </div>
               </div>
               <button>Download</button>
             </div>
