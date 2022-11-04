@@ -5,6 +5,7 @@ import PhotoCard from "../../components/Photos/PhotoCard";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import styles from "./Discover.module.css";
 import type { activePhoto as activePhotoType } from "../../components/activePhotoType";
+import Image from "next/image";
 
 const Discover: React.FC = ({ photos }: any) => {
   const [activePhoto, setActivePhoto] = useState<activePhotoType>({
@@ -73,7 +74,20 @@ const Discover: React.FC = ({ photos }: any) => {
           })}
           {activePhoto.index < 10 && (
             <div className={styles.photoDetails}>
-              <p>{activePhoto.creator}</p>
+              <Image
+                src={activePhoto.photographImage}
+                alt="PhotoImage"
+                width={100}
+                height={100}
+              />
+              <div>
+                <p>{activePhoto.creator}</p>
+              </div>
+              <div>
+                <h4>{activePhoto.totalLikes}</h4>
+                <p>Total Likes</p>
+              </div>
+              <button>Download</button>
             </div>
           )}
         </div>
