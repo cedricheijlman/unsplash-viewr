@@ -71,6 +71,9 @@ const Discover: React.FC = ({ photos }: any) => {
               />
             );
           })}
+          <div className={styles.photoDetails}>
+            <p>{activePhoto.creator}</p>
+          </div>
         </div>
       </section>
     </main>
